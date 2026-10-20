@@ -1,0 +1,138 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --accent-color: #6366f1;
+    --border-radius: 12px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    max-width: 900px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    min-width: 300px;
+}
+
+h2, h3 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background-color: #0f172a;
+    color: white;
+    box-sizing: border-box;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+input[type="color"] {
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.btn {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+}
+
+/* Estilos de la tarjeta de resultado */
+.profile-card {
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    background: #334155;
+    margin-bottom: 5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.empty-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #334155;
+    background: transparent;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
